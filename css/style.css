@@ -18,14 +18,107 @@ body {
 /* Layout CSS */
 .container {
   width: 375px; /* 작업 완료 후 width : 100% */
-  /* position: relative; */
+  position: relative;
 }
 /* Logo CSS */
 .logo {
   font-family: var(--logoEn);
 }
-
-/* ##### Preloading html ##### */
+/* Button CSS */
+.btn_primary {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+}
+/* GNB CSS */
+.gnb {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 375px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 1px solid var(--cloudyGray);
+}
+.gnb a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--lightGray);
+  gap: 5px;
+}
+.gnb a i {
+  font-size: 22px;
+}
+.gnb a:nth-of-type(1) i {
+  font-size: 28px;
+}
+.gnb a:nth-of-type(4) i {
+  font-size: 26px;
+}
+.gnb a span {
+  display: block;
+  font-size: 13px;
+}
+/* Main Header CSS */
+.main_header {
+  height: 80px;
+  background-color: var(--crimson);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.btn_back {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+}
+.main_header .logo {
+  flex: 5;
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+}
+.user_alarm {
+  flex: 1;
+  font-size: 22px;
+  color: #fff;
+}
+.user_alarm span {
+  position: relative;
+}
+.user_alarm span em {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  background-color: var(--royalBlue);
+  border-radius: 5px;
+  text-align: center;
+}
+.user_alarm span em::after {
+  content: attr(data-count);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal;
+  font-size: 11px;
+  font-family: var(--primaryEn);
+}
+/* ########## Preloading html ########## */
 .preloading {
   height: 100vh;
 }
@@ -45,8 +138,6 @@ body {
   color: var(--crimson);
   white-space: nowrap;
 }
-.slogan {
-}
 .slogan span {
   display: block;
   font-family: var(--secondaryKr);
@@ -54,4 +145,113 @@ body {
   font-weight: bold;
   line-height: 1.5em;
 }
-/* ##### Sign-in html ##### */
+/* ########## Sign-in html ########## */
+.signin {
+  height: 750px;
+}
+.signin_inner {
+}
+.signin_photo {
+  height: 250px;
+  background: url(/images/signin-header.jpg) no-repeat center center / cover;
+}
+.signin_content {
+  padding: 20px;
+}
+.signin_header {
+  text-align: center;
+}
+.signin_header h2 {
+  font-size: 26px;
+  margin: 0;
+}
+.signin_header p {
+  font-size: 16px;
+  font-weight: normal;
+}
+.signin_field input {
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--gainsboro);
+  margin: 5px 0;
+}
+.signin_field input:focus {
+  border-color: var(--yellowGreen);
+}
+.signin_field input::placeholder {
+  color: var(--silverGray);
+  transition: 0.35s;
+}
+.signin_field input:focus::placeholder {
+  color: transparent;
+}
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.status label {
+  transform: translateY(-2px);
+}
+.status label input {
+  display: none;
+}
+.status label input + em {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+  transform: translateY(2px);
+}
+.status label input + em::after {
+  content: "\F26B";
+  font-style: normal;
+  font-family: "bootstrap-icons";
+  color: var(--lightGray);
+}
+.status label input:checked + em::after {
+  color: var(--crimson);
+}
+button.btn_signin {
+  background-color: var(--yellowGreen);
+}
+.join_member {
+  text-align: center;
+  margin: 15px 0;
+  font-weight: normal;
+}
+.join_member a {
+  font-weight: normal;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+.easy_signin {
+  text-align: center;
+}
+.easy_signin span {
+  color: var(--lightGray);
+}
+.social_btn {
+  margin: 10px 0;
+}
+.social_btn a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+}
+.social_btn a img {
+  width: inherit;
+}
+/* ########## Sign-up html ########## */
+.signup {
+  height: 750px;
+}
+.signup_inner {
+}
+
+/* ########## Sign-up html ########## */
+
+/* ########## Sign-up html ########## */
