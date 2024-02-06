@@ -1,0 +1,74 @@
+.container.front
+	.front-inner
+		
+		.main-header
+			[same html structure]
+		
+		.front-content
+			.category-navigation
+				a * 5
+			.front-slider
+				(a > img) * 3
+			.goods-suggestion.today
+				.goods-suggestion-header
+					h2, p(변경)  ==>  h2 > span
+				.goods-suggestion-items
+					.goods-suggestion-item
+						.thum > img
+						.desc
+							.goods-badge
+								span.badge.new
+								span.badge.hot
+							.goods-title
+								h3
+								div
+									span
+									b
+									s
+				a.btn-goods-suggestion-more					
+									
+			.banner
+				a > img
+			.goods-suggestion.new-arrival
+				[same html structure]
+			.banner
+				a > img
+			
+			.food-type
+				.food-type-tab-inner
+					input[type=radio] * 6
+					.food-type-tab-btn
+						label * 6
+					.food-type-tabs
+						.food-type-tab
+							.tab-item
+								.thum > img
+								.desc
+									.badge-wish
+										.goods-badge
+											span.badge.new
+											span.badge.hot
+										span.wish	
+									.goods-title
+										h3
+										div
+											span
+											b
+											s	
+				a.btn-goods-suggestion-more							
+			
+			.front-footer
+				h3
+				.company-link
+					a * 4
+				.company-info
+					.company-info-title
+						h3, button.btn-view-more
+					.company-info-more
+						span * 5
+		
+		.gnb
+			[same html structure]	
+			
+			
+			

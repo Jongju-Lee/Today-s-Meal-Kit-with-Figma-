@@ -1,0 +1,37 @@
+.container.signup
+	.signup-inner
+		
+		.main-header
+			button.btn-back > font-icon
+			h2.logo
+			.user-alarm
+				span > font-icon, em
+		
+		.signup-content
+			.signup-field.id-pw
+				span > em
+				input[type=email]
+			.signup-field.id-pw
+				span > em
+				input[type=password]	
+			.signup-field.id-pw
+				span > em
+				input[type=password]
+			.signup-field.birth
+				span > em
+				div
+					input[type=text]
+					select
+					select
+			.signup-field.phone
+				span > em
+				input[type=text]
+				button.btn-getcode
+			.agree-term
+				(label > input[type=checkbox], em) * 3
+			button.btn-signup	
+		
+		.gnb
+			[same html structure]
+			
+			

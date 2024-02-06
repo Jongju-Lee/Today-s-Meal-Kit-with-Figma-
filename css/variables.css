@@ -1,0 +1,37 @@
+/* Font Family CDN */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@font-face {
+  font-family: "NEXON Lv2 Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Font Family */
+  --primaryKr: "Noto Sans KR", sans-serif;
+  --primaryEn: "Roboto", sans-serif;
+  --logoEn: "Bree Serif", serif;
+  --secondaryKr: "NEXON Lv2 Gothic";
+
+  /* Text Color */
+  --darkBlack: #333333;
+  --lightBlack: #555555;
+  --darkGray: #777777;
+  --lightGray: #999999;
+  --cloudyGray: #eeeeee;
+
+  /* Object Color */
+  --yellowGreen: #bbd94e;
+  --gold: #f2e635;
+  --beige: #f2e8d5;
+  --lightPink: #f2b999;
+  --crimson: #f2444e;
+  --limeGreen: #2ecc71;
+  --royalBlue: #346aff;
+  --turquoise: #72e7e1;
+  --snow: #f5f5f5;
+}

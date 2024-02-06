@@ -1,0 +1,28 @@
+[ 폰트 사이즈 변수를 사용할 수도 있음 ]
+
+:root {
+  /* Font Size */
+  --xxx-small: 10px;
+  --xx-small: 12px;
+  --x-small: 14px;
+  --small: 16px;
+  --medium: 18px;
+  --large: 22px;
+  --x-large: 28px;
+  --xx-large: 36px;
+}
+
+/* Font Size */
+--xxx-small: 10px;
+--xx-small: 12px;
+--x-small: 14px;
+--small: 16px;
+--medium: 18px;
+--large: 22px;
+--x-large: 28px;
+--xx-large: 36px;
+
+=============================================
+
+[ 비주얼 스튜디오 코드에서 다중 파일 라이브 프리뷰 하기 ]
+

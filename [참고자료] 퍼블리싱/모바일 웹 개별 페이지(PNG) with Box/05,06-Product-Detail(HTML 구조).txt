@@ -1,0 +1,58 @@
+.container.goods-detail
+	.goods-detail-inner
+		.goods-detail-header
+			.back-logo
+				button.btn-back > font-icon
+				h2.logo
+			.navigator
+				button.user-search > font-icon
+				button.user-home > font-icon
+				button.cart-alarm 
+					b > font-icon, em
+		.goods-detail-content
+			.goods-detail-slider-outer
+				.goods-detail-slider
+					a > img
+			.goods-info
+				.goods-rating
+					.stars
+						font-icon * 5, em
+				.goods-badge
+					span.badge.new
+					span.badge.hot
+				.goods-title
+					h3
+					div
+						span
+						span > s, b
+				.goods-delivery-info
+					b
+					div > span * 3
+			.good-detail
+				[normal html structure]
+			.goods-accordion
+				.title
+				.detail
+				.title
+				.detail
+				.title
+				.detail
+				.title
+				.detail
+		.goods-order-info
+			.goods-order-choice
+				span.wish
+				button.btn-order-choice
+			.goods-order-final
+				.goods-order-final-info
+					span.info-badge.arrival
+					.goods-title
+						[same html structure]
+				.payment-benefit
+					b, p > a
+				.good-order-btns
+					button.btn-cart
+					button.btn-now-order 
+					
+					
+					

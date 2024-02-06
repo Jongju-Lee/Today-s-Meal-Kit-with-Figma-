@@ -1,0 +1,25 @@
+/mobile-web-publishing
+	/images
+		[png, jpg, svg]
+	/include
+		main-header.html
+		goods-detail-header.html
+		gnb.html
+	/css
+		style.css
+		variables.css
+	/js
+		/slick
+		custom.js
+	/html
+		signin.html
+		signup.html
+		front.html
+		goods-detail.html
+		category.html
+		search.html
+		mypage.html
+		cart.html
+	index.html or preloading.html
+	
+	

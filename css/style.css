@@ -1,0 +1,57 @@
+/* Import Local CSS */
+@import url(/css/reset.css);
+@import url(/css/variables.css);
+
+* {
+  font-family: var(--primaryKr);
+  font-weight: 300;
+}
+body {
+  margin: 0;
+  color: var(--darkBlack);
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+/* ##### Common CSS ##### */
+
+/* Layout CSS */
+.container {
+  width: 375px; /* 작업 완료 후 width : 100% */
+  /* position: relative; */
+}
+/* Logo CSS */
+.logo {
+  font-family: var(--logoEn);
+}
+
+/* ##### Preloading html ##### */
+.preloading {
+  height: 100vh;
+}
+.preloading_inner {
+  position: relative;
+  height: inherit;
+  background: url(/images/preloading-back.jpg) no-repeat center left -130px;
+  background-size: cover;
+}
+.heading_preloading {
+  position: absolute;
+  top: 75px;
+  left: 30px;
+}
+.heading_preloading .logo {
+  font-size: 32px;
+  color: var(--crimson);
+  white-space: nowrap;
+}
+.slogan {
+}
+.slogan span {
+  display: block;
+  font-family: var(--secondaryKr);
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+/* ##### Sign-in html ##### */
