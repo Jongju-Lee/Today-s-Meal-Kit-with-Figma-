@@ -14,7 +14,6 @@ body {
 }
 
 /* ##### Common CSS ##### */
-
 /* Layout CSS */
 .container {
   width: 375px; /* 작업 완료 후 width : 100% */
@@ -35,7 +34,7 @@ body {
 }
 /* GNB CSS */
 .gnb {
-  position: absolute;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 375px;
@@ -56,6 +55,27 @@ body {
 }
 .gnb a i {
   font-size: 22px;
+  position: relative;
+}
+.gnb a i em {
+  position: absolute;
+  top: -3px;
+  right: 18px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--royalBlue);
+  border-radius: 50%;
+  font-style: normal;
+}
+.gnb a i em::after {
+  content: attr(data-count);
+  font-family: var(--primaryEn);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 11px;
 }
 .gnb a:nth-of-type(1) i {
   font-size: 28px;
@@ -93,6 +113,7 @@ body {
   flex: 1;
   font-size: 22px;
   color: #fff;
+  margin-right: 5px;
 }
 .user_alarm span {
   position: relative;
@@ -105,7 +126,7 @@ body {
   height: 15px;
   line-height: 15px;
   background-color: var(--royalBlue);
-  border-radius: 5px;
+  border-radius: 50%;
   text-align: center;
 }
 .user_alarm span em::after {
@@ -117,6 +138,71 @@ body {
   font-style: normal;
   font-size: 11px;
   font-family: var(--primaryEn);
+}
+/* Content Padding */
+[class*="content"] {
+  padding: 20px;
+}
+/* Custom Check Box */
+.custom_chk label {
+  transform: translateY(-2px);
+}
+.custom_chk label input {
+  display: none;
+}
+.custom_chk label input + em {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+  transform: translateY(2px);
+}
+.custom_chk label input + em::after {
+  content: "\F26B";
+  font-style: normal;
+  font-family: "bootstrap-icons";
+  color: var(--lightGray);
+}
+.custom_chk label input:checked + em::after {
+  color: var(--crimson);
+}
+/* Custom Buttons - Clear */
+.btn_all_clear {
+  font-size: 12px;
+  padding: 3px 8px;
+  border: none;
+  background-color: var(--gainsboro);
+  color: #fff;
+  border-radius: 10px;
+}
+.btn_clear {
+  background-color: transparent;
+  color: var(--lightGray);
+  border: none;
+}
+/* Arrow Icon */
+.arrow::after {
+  content: "\F282";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--fuschia);
+  transition: 0.35s;
+}
+.arrow.active::after {
+  background-color: transparent;
+  transform: translateY(-50%) rotate(180deg);
 }
 /* ########## Preloading html ########## */
 .preloading {
@@ -147,16 +233,10 @@ body {
 }
 /* ########## Sign-in html ########## */
 .signin {
-  height: 750px;
-}
-.signin_inner {
 }
 .signin_photo {
   height: 250px;
   background: url(/images/signin-header.jpg) no-repeat center center / cover;
-}
-.signin_content {
-  padding: 20px;
 }
 .signin_header {
   text-align: center;
@@ -191,29 +271,6 @@ body {
   justify-content: space-between;
   margin: 10px 0;
 }
-.status label {
-  transform: translateY(-2px);
-}
-.status label input {
-  display: none;
-}
-.status label input + em {
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  display: inline-block;
-  margin-right: 3px;
-  transform: translateY(2px);
-}
-.status label input + em::after {
-  content: "\F26B";
-  font-style: normal;
-  font-family: "bootstrap-icons";
-  color: var(--lightGray);
-}
-.status label input:checked + em::after {
-  color: var(--crimson);
-}
 button.btn_signin {
   background-color: var(--yellowGreen);
 }
@@ -246,12 +303,393 @@ button.btn_signin {
   width: inherit;
 }
 /* ########## Sign-up html ########## */
-.signup {
-  height: 750px;
+.signup_field {
+  margin-bottom: 15px;
 }
-.signup_inner {
+.signup_field span {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.signup_field span em {
+  color: crimson;
+}
+.signup_field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--gainsboro);
+  padding: 10px 0;
+}
+.signup_field input::placeholder {
+  color: var(--silverGray);
+  transition: 0.35s;
+}
+.signup_field input.day::placeholder {
+  color: var(--darkBlack);
+}
+.signup_field input:focus::placeholder {
+  color: transparent;
+}
+.signup_field > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.signup_field > div :is(input, select, button) {
+  padding: 8px;
+  border: 1px solid var(--gainsboro);
+  border-radius: 5px;
+}
+.signup_field > div :is(input, select) {
+  flex: 1;
+  text-align: center;
+}
+.signup_field :is(input, select):focus {
+  border-color: var(--yellowGreen);
+}
+.btn_getcode {
+  width: 33%;
+  background-color: #fff;
+}
+.agree_terms {
+  margin-bottom: 15px;
+}
+.agree_terms label {
+  display: block;
+  color: var(--lightBlack);
+  margin-bottom: 7px;
+}
+.agree_terms input {
+  font-size: 13px;
+}
+.btn_signup {
+  background-color: var(--crimson);
+}
+/* ########## Category html ########## */
+.category_content {
+  padding: 0;
+}
+.category_accordion .title {
+  position: relative;
+  color: var(--crimson);
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--cloudyGray);
+  font-size: 16px;
+  font-weight: 500;
+}
+.category_accordion .detail {
+  display: none;
+  padding: 10px 20px;
+  background-color: var(--snow);
+}
+.category_accordion .detail a {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2em;
+  padding: 5px 0;
+}
+/* ########## Search html ########## */
+.search {
+}
+.search_inner {
+}
+.search_content {
+}
+.search_field {
+}
+.search_field input {
+  width: 100%;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 30px;
+  background: var(--snow) url(/images/icon-search.svg) no-repeat center left
+    20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+.search_field input::placeholder {
+  transition: 0.35s;
+}
+.search_field input:focus::placeholder {
+  color: transparent;
+}
+.search_recent .title {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search_recent .title h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--crimson);
+}
+.search_recent .item {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--cloudyGray);
+}
+.search_recent .item span {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--lightGray);
+}
+.search_increase {
+  margin-top: 30px;
+}
+.search_increase .title h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.search_increase .title p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: var(--lightGray);
+}
+.search_increase_list {
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: rank 0;
+}
+.search_increase_list li::before {
+  counter-increment: rank;
+  content: counter(rank);
+  margin-right: 10px;
+  font-weight: 500;
+}
+.search_increase_list li a {
+  font-weight: 400;
+}
+/* ########## My Page html ########## */
+.mypage {
+}
+.mypage_inner {
+}
+.mypage_content {
+  padding: 20px 0;
+}
+.mypage .user_info {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+.mypage .user_avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mypage .user_avatar img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.user_summary {
+  flex: 1;
+}
+.user_summary .rating {
+  display: flex;
+  justify-content: space-between;
+}
+.user_summary .rating > * {
+  font-size: 15px;
+  font-weight: 500;
+}
+.user_summary .rating b {
+  flex: 1;
+  color: var(--limeGreen);
+}
+.user_summary .rating span {
+  flex: 3;
+  color: var(--lightBlack);
+}
+.btn_setting {
+  flex: 1;
+  text-align: right;
+  color: var(--lightGray);
+}
+.user_summary .nickname {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.point_coupon {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.point_coupon :is(.point, .coupon) {
+  padding: 3px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--gainsboro);
+  display: flex;
+  justify-content: space-between;
+}
+.point_coupon :is(.point, .coupon) span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.point_coupon :is(.point, .coupon) span:nth-child(2) {
+  color: var(--crimson);
+}
+.point_coupon .point {
+  flex: 2;
+}
+.point_coupon .point span {
+}
+.point_coupon .coupon {
+  flex: 1;
+}
+.delivering {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+.delivering h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.delivering_items {
+  border: 1px solid var(--cloudyGray);
+  border-radius: 10px;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.delivering_item {
+  display: flex;
+  gap: 10px;
+}
+.delivering_item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cloudyGray);
+}
+.delivering_item:last-child {
+  border-bottom: none;
+}
+.delivering_item .thum {
+  width: 60px;
+  height: 60px;
+}
+.delivering_item .thum img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.delivering_item .desc span {
+  font-weight: 400;
+}
+.delivering_item .desc b {
+  display: block;
+  font-weight: 500;
+  color: var(--limeGreen);
+}
+.mypage .banner {
+  margin: 20px 0;
+}
+.mypage .banner a {
+  width: 100%;
+  height: 60px;
+}
+.mypage .banner a img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.user_shortcut {
+  margin-bottom: 20px;
+}
+.user_shortcut a {
+  position: relative;
+  border-bottom: 1px solid var(--cloudyGray);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.user_shortcut a:last-of-type {
+  border-bottom: none;
 }
 
+.user_shortcut a i {
+  font-size: 16px;
+  width: 25px;
+}
+.user_shortcut a:nth-of-type(5) i {
+  font-size: 20px;
+}
+.user_shortcut a span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.user_shortcut .arrow::after {
+  transform: translateY(-50%) rotate(-90deg);
+  background-color: transparent;
+  right: 15px;
+}
+.btn_wrapper {
+  padding: 0 20px;
+}
+.btn_signout {
+  background-color: var(--gainsboro);
+}
+/* ########## Cart html ########## */
+.cart {
+}
+.cart_inner {
+}
+.cart_content {
+}
+.cart_items_outer {
+}
+.cart_items_header {
+}
+.cart_items_header h3 {
+}
+.cart_items {
+}
+.cart_item {
+}
+.cart_item_title {
+}
+.cart_item_title label {
+}
+.cart_item_title input {
+}
+.cart_item_title b {
+}
+.cart_item_title button {
+}
+.cart_item_desc {
+}
+.cart_item_thum {
+}
+.cart_item_thum img {
+}
+.cart_item_info {
+}
+.delivery_date {
+}
+.order_time {
+}
+.order_time i {
+}
+.total_price {
+}
+.benefit {
+}
+.benefit em {
+}
+.benefit em i {
+}
 /* ########## Sign-up html ########## */
-
 /* ########## Sign-up html ########## */
