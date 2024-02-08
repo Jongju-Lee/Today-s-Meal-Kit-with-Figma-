@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main - Today's Meal Kit</title>
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/custom.js"></script>
+  </head>
+  <body>
+    <div class="container front">
+      <div class="front_inner">
+        <!-- Main Header Include -->
+        <div class="main_header_include"></div>
+        <!-- Main Header Include -->
+        <div class="front_content">
+          <!-- Category Navigation -->
+          <div class="category_navigation">
+            <a href="#none" class="active">홈으로</a>
+            <a href="#none">신상품</a>
+            <a href="#none">인기상품</a>
+            <a href="#none">기획전</a>
+            <a href="#none">이벤트</a>
+          </div>
+          <!-- Front Slider -->
+          <div class="front_slider">
+            <a href="#none"
+              ><img
+                src="/images/front-slider-01.jpg"
+                alt="쇼핑라이브 첫방송 배너"
+            /></a>
+            <a href="#none"
+              ><img src="/images/front-slider-02.jpg" alt="리뷰 커피쿠폰 증정"
+            /></a>
+            <a href="#none"
+              ><img src="/images/front-slider-03.jpg" alt="대체공휴일 안내"
+            /></a>
+          </div>
+          <!-- Goods Suggestion -->
+          <div class="goods_suggestion today">
+            <div class="goods_suggestion_header">
+              <h2>
+                TODAY'S 취향저격 추천상품
+                <span>오늘도 혼밥하는 외로운 당신의 취향을 저격합니다.</span>
+              </h2>
+            </div>
+            <div class="goods_suggestion_items">
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-01.jpg" alt="오징어 스파게티" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                    </h3>
+                    <div>
+                      <span>30%</span>
+                      <b>11,760원</b>
+                      <s>16,800원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝</h3>
+                    <div>
+                      <span>20%</span>
+                      <b>18,800원</b>
+                      <s>23,500원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분, 270g)
+                    </h3>
+                    <div>
+                      <span>10%</span>
+                      <b>11,250원</b>
+                      <s>12,500원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-05.jpg" alt="즉석떡볶이" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>7분완성 즉석떡볶이 캠핑요리 밀키트 2~3인분 770g</h3>
+                    <div>
+                      <span>10%</span>
+                      <b>10,350원</b>
+                      <s>11,500원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-04.jpg" alt="부채살 스테이크" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      투데이즈 밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                      스테이크(2인분)
+                    </h3>
+                    <div>
+                      <span>15%</span>
+                      <b>15,300원</b>
+                      <s>18,000원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-06.jpg" alt="비빔밥" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      그리운 따뜻한 집밥, 간편식 비빔밥 밀키트 2-3인분 세트
+                    </h3>
+                    <div>
+                      <span>10%</span>
+                      <b>12,600원</b>
+                      <s>14,000원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#none" class="btn_goods_suggestion_more"
+              >추천상품 전체보기</a
+            >
+          </div>
+          <!-- Banner -->
+          <div class="banner">
+            <a href="#none">
+              <img
+                src="/images/goods-banner-01.jpg"
+                alt="밀키트 세트메뉴 배너"
+              />
+            </a>
+          </div>
+          <!-- Goods Suggestion -->
+          <div class="goods_suggestion arrival">
+            <div class="goods_suggestion_header">
+              <h2>
+                TODAY'S 신상품
+                <span>투데이즈 밀키트 신상품을 놓치지 말고 바로 확인</span>
+              </h2>
+            </div>
+            <div class="goods_suggestion_items">
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-01.jpg" alt="오징어 스파게티" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                    </h3>
+                    <div>
+                      <span>30%</span>
+                      <b>11,760원</b>
+                      <s>16,800원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝</h3>
+                    <div>
+                      <span>20%</span>
+                      <b>18,800원</b>
+                      <s>23,500원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분, 270g)
+                    </h3>
+                    <div>
+                      <span>10%</span>
+                      <b>11,250원</b>
+                      <s>12,500원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-05.jpg" alt="즉석떡볶이" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>7분완성 즉석떡볶이 캠핑요리 밀키트 2~3인분 770g</h3>
+                    <div>
+                      <span>10%</span>
+                      <b>10,350원</b>
+                      <s>11,500원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-04.jpg" alt="부채살 스테이크" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      투데이즈 밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                      스테이크(2인분)
+                    </h3>
+                    <div>
+                      <span>15%</span>
+                      <b>15,300원</b>
+                      <s>18,000원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods_suggestion_item">
+                <div class="thum">
+                  <img src="/images/goods-thum-06.jpg" alt="비빔밥" />
+                </div>
+                <div class="desc">
+                  <div class="goods_badge">
+                    <span class="badge new">NEW</span>
+                    <span class="badge hot">HOT</span>
+                  </div>
+                  <div class="goods_title">
+                    <h3>
+                      그리운 따뜻한 집밥, 간편식 비빔밥 밀키트 2-3인분 세트
+                    </h3>
+                    <div>
+                      <span>10%</span>
+                      <b>12,600원</b>
+                      <s>14,000원</s>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#none" class="btn_goods_suggestion_more"
+              >신상품 전체보기</a
+            >
+          </div>
+          <!-- Banner -->
+          <div class="banner">
+            <a href="#none">
+              <img src="/images/goods-banner-02.jpg" alt="적립금 혜택 배너" />
+            </a>
+          </div>
+          <!-- Food Type -->
+          <div class="food_type">
+            <div class="tab_inner">
+              <input type="radio" name="food_type" id="tab1" checked />
+              <input type="radio" name="food_type" id="tab2" />
+              <input type="radio" name="food_type" id="tab3" />
+              <input type="radio" name="food_type" id="tab4" />
+              <input type="radio" name="food_type" id="tab5" />
+              <div class="tab_btn">
+                <label for="tab1">한식/일식</label>
+                <label for="tab2">중식/일식</label>
+                <label for="tab3">동남아</label>
+                <label for="tab4">샐러드</label>
+                <label for="tab5">프리미엄 밀키트</label>
+              </div>
+              <div class="tabs">
+                <div class="tab">
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-01.jpg"
+                        alt="오징어 스파게티"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                          130g
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,760원</b>
+                          <s>16,800원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>8,800원</b>
+                          <s>23,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분,
+                          270g)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,250원</b>
+                          <s>12,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-04.jpg"
+                        alt="부채살 스테이크"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          투데이즈밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                          스테이크(2인분)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>15,300원</b>
+                          <s>18,000원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-01.jpg"
+                        alt="오징어 스파게티"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                          130g
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,760원</b>
+                          <s>16,800원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>8,800원</b>
+                          <s>23,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분,
+                          270g)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,250원</b>
+                          <s>12,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-04.jpg"
+                        alt="부채살 스테이크"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          투데이즈밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                          스테이크(2인분)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>15,300원</b>
+                          <s>18,000원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-01.jpg"
+                        alt="오징어 스파게티"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                          130g
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,760원</b>
+                          <s>16,800원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>8,800원</b>
+                          <s>23,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분,
+                          270g)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,250원</b>
+                          <s>12,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-04.jpg"
+                        alt="부채살 스테이크"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          투데이즈밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                          스테이크(2인분)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>15,300원</b>
+                          <s>18,000원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-01.jpg"
+                        alt="오징어 스파게티"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                          130g
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,760원</b>
+                          <s>16,800원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>8,800원</b>
+                          <s>23,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분,
+                          270g)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,250원</b>
+                          <s>12,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-04.jpg"
+                        alt="부채살 스테이크"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          투데이즈밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                          스테이크(2인분)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>15,300원</b>
+                          <s>18,000원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab">
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-01.jpg"
+                        alt="오징어 스파게티"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인)
+                          130g
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,760원</b>
+                          <s>16,800원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-02.jpg" alt="야채 닭꼬치" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>8,800원</b>
+                          <s>23,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img src="/images/goods-thum-03.jpg" alt="닭 찜 샐러드" />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          따뜻하게 먹는 저칼로리, 부드러운 닭 찜 샐러드(1인분,
+                          270g)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>11,250원</b>
+                          <s>12,500원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab_item">
+                    <div class="thum">
+                      <img
+                        src="/images/goods-thum-04.jpg"
+                        alt="부채살 스테이크"
+                      />
+                    </div>
+                    <div class="desc">
+                      <div class="badge_wish">
+                        <div class="goods_badge">
+                          <span class="badge new">new</span>
+                          <span class="badge hot">hot</span>
+                        </div>
+                        <span class="wish">font-icon</span>
+                      </div>
+                      <div class="goods_title">
+                        <h3>
+                          투데이즈밀키트 시그니쳐 메뉴, 엄선한 부채살 골드라벨
+                          스테이크(2인분)
+                        </h3>
+                        <div>
+                          <span>30%</span>
+                          <b>15,300원</b>
+                          <s>18,000원</s>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Front Footer -->
+          <div class="front_footer"></div>
+        </div>
+        <!-- GNB Include -->
+        <div class="gnb_include"></div>
+        <!-- GNB Include -->
+      </div>
+      x
+    </div>
+  </body>
+</html>
