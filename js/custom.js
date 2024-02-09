@@ -52,4 +52,22 @@ $(function () {
     dots: false,
     autoplay: false,
   });
+  /* ##### Slick Slider - Goods Detail ##### */
+  /* goods_slider */
+  $(".goods_slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    autoplay: false,
+  });
+  /* Wish Button */
+  $(".wish").click(function () {
+    $(this).toggleClass("active");
+  });
+  /* Front Footer - View More Button */
+  $(".btn_view_more").click(function () {
+    $(this).toggleClass("active");
+    $(".company_info_more").stop().slideToggle();
+  });
 });
