@@ -53,6 +53,11 @@ $(function () {
     $(".goods_order_choice").stop().slideDown();
     $(".goods_order_final").stop().slideUp();
   });
+  /* ##### Main - Category Navigation ##### */
+  $(".category_navigation a").click(function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
   /* ##### Main - Slick Slider ##### */
   /* front_slider */
   $(".front_slider").slick({
