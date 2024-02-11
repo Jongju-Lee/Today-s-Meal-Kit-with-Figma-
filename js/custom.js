@@ -4,6 +4,8 @@ $(function () {
   $(".gnb_include").load("/include/gnb.html");
   /* main_header */
   $(".main_header_include").load("/include/main_header.html");
+  /* goods_detail_header */
+  $(".goods_detail_header_include").load("/include/goods-detail-header.html");
   /* ##### Category - Accordion ##### */
   $(".category_accordion .detail").eq(0).show();
   $(".category_accordion .title").click(function () {
@@ -20,21 +22,38 @@ $(function () {
   $(".gnb a").click(function () {
     $(this).toggleClass("active");
   });
-  /* Clear Button - Search (삭제버튼) */
+  /* ##### Search - Clear Button ##### (삭제버튼) */
   $(".search_recent .btn_all_clear").click(function () {
     $(".search .search_recent .item").hide();
   });
   $(".search_recent .btn_clear").click(function () {
     $(this).parent().slideUp();
   });
-  /* ##### Clear Button - Cart (삭제버튼) ##### */
+  /* ##### Cart - Clear Button (삭제버튼) ##### */
   $(".cart .btn_all_clear").click(function () {
     $(".cart_items").slideUp();
   });
   $(".cart .btn_clear").click(function () {
     $(this).parent().parent().slideUp();
   });
-  /* ##### Slick Slider - Main ##### */
+  /* ##### Detail - Goods Accordion ##### */
+  $(".goods_accordion .detail").eq(0).show(); // 상품 후기는 미리 열려있게
+  $(".goods_accordion .title").click(function () {
+    $(this).siblings(".title").removeClass("active");
+    $(this).toggleClass("active");
+    $(this).siblings(".detail").stop().slideUp();
+    $(this).next(".detail").stop().slideToggle();
+  });
+  /* ##### Detail - Order Choice Button ##### */
+  $(".btn_order_choice").click(function () {
+    $(".goods_order_choice").stop().slideUp();
+    $(".goods_order_final").stop().slideDown(250);
+  });
+  $(".goods_detail_content, .down_icon").click(function () {
+    $(".goods_order_choice").stop().slideDown();
+    $(".goods_order_final").stop().slideUp();
+  });
+  /* ##### Main - Slick Slider ##### */
   /* front_slider */
   $(".front_slider").slick({
     slidesToShow: 1,
@@ -52,7 +71,7 @@ $(function () {
     dots: false,
     autoplay: false,
   });
-  /* ##### Slick Slider - Goods Detail ##### */
+  /* ##### Goods Detail - Slick Slider ##### */
   /* goods_slider */
   $(".goods_slider").slick({
     slidesToShow: 1,
@@ -65,7 +84,7 @@ $(function () {
   $(".wish").click(function () {
     $(this).toggleClass("active");
   });
-  /* Front Footer - View More Button */
+  /* ##### Front Footer - View More Button ##### */
   $(".btn_view_more").click(function () {
     $(this).toggleClass("active");
     $(".company_info_more").stop().slideToggle();

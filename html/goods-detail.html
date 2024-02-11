@@ -28,45 +28,36 @@
   <body>
     <div class="container goods_detail">
       <div class="goods_detail_inner">
-        <div class="goods_detail_header">
-          <button class="btn_back">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-          <h2 class="logo">Today's Meal Kit</h2>
-          <div class="navigator">
-            <span class="user_search">
-              <i class="bi bi-search"></i>
-            </span>
-            <span class="user_home">
-              <i class="bi bi-house"></i>
-            </span>
-            <span class="user_cart">
-              <i class="bi bi-cart"></i><em data-number="6"></em
-            ></span>
-          </div>
-        </div>
+        <!-- Goods Detail Header Include -->
+        <div class="goods_detail_header_include"></div>
+        <!-- Goods Detail Header Include -->
         <div class="goods_detail_content">
-          <div class="goods_slider">
-            <div class="goods_slider_item">
-              <a href="#none"
-                ><img src="/images/goods-detail-01.jpg" alt="오징어 스파게티"
-              /></a>
+          <div class="goods_slider_outer">
+            <div class="goods_slider">
+              <div class="goods_slider_item">
+                <a href="#none"
+                  ><img src="/images/goods-detail-01.jpg" alt="오징어 스파게티"
+                /></a>
+              </div>
+              <div class="goods_slider_item">
+                <a href="#none"
+                  ><img src="/images/goods-detail-02.jpg" alt="봉골레 스파게티"
+                /></a>
+              </div>
+              <div class="goods_slider_item">
+                <a href="#none"
+                  ><img src="/images/goods-detail-03.jpg" alt="씨푸드 스파게티"
+                /></a>
+              </div>
+              <div class="goods_slider_item">
+                <a href="#none"
+                  ><img
+                    src="/images/goods-detail-04.jpg"
+                    alt="감베로니 스파게티"
+                /></a>
+              </div>
             </div>
-            <div class="goods_slider_item">
-              <a href="#none"
-                ><img src="/images/goods-detail-02.jpg" alt="봉골레 스파게티"
-              /></a>
-            </div>
-            <div class="goods_slider_item">
-              <a href="#none"
-                ><img src="/images/goods-detail-03.jpg" alt="씨푸드 스파게티"
-              /></a>
-            </div>
-            <div class="goods_slider_item">
-              <a href="#none"
-                ><img src="/images/goods-detail-04.jpg" alt="감베로니 스파게티"
-              /></a>
-            </div>
+            <button class="btn_share"><i class="bi bi-share-fill"></i></button>
           </div>
           <div class="goods_info">
             <div class="goods_rating">
@@ -140,7 +131,7 @@
             </div>
           </div>
           <div class="goods_accordion">
-            <div class="title">상품후기(53)</div>
+            <div class="title active">상품후기(53)</div>
             <div class="detail">
               <div class="accordion_detail_item">
                 <div class="stars">
@@ -201,6 +192,7 @@
             <button class="btn_order_choice">구매하기</button>
           </div>
           <div class="goods_order_final">
+            <div class="down_icon"></div>
             <div class="goods_order_final_info">
               <span class="info_badge arrival">내일도착</span>
               <h3>바다향 가득! 해산물 씨키트 해물 스파게티 밀키트(2인) 130g</h3>
@@ -209,24 +201,24 @@
                 <s>16,800원</s>
                 <b>11,760원</b>
                 <div class="final_quantity">
-                  <button class="minus"></button>
+                  <button class="minus"><i class="bi bi-dash"></i></button>
                   <input type="text" value="1" readonly />
-                  <button class="plus"></button>
+                  <button class="plus"><i class="bi bi-plus"></i></button>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="payment_benefit">
-            <b>결제 혜택</b>
-            <p>
-              하나카드 5만원 결제 시 최대 8개월 무이자 할부<br />
-              PAYCO 생에 첫 결제 시 2,000원 즉시 할인
-              <a href="#none">더보기</a>
-            </p>
-          </div>
-          <div class="goods_order_btns">
-            <button class="btn_cart">장바구니 담기</button>
-            <button class="btn_now_order">바로구매</button>
+            <div class="payment_benefit">
+              <b>결제 혜택</b>
+              <p>
+                하나카드 5만원 결제 시 최대 8개월 무이자 할부<br />
+                PAYCO 생에 첫 결제 시 2,000원 즉시 할인
+                <a href="#none">더보기</a>
+              </p>
+            </div>
+            <div class="goods_order_btns">
+              <button class="btn_cart">장바구니 담기</button>
+              <button class="btn_now_order">바로구매</button>
+            </div>
           </div>
         </div>
       </div>
