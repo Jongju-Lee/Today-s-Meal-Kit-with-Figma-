@@ -30,11 +30,30 @@ $(function () {
     $(this).parent().slideUp();
   });
   /* ##### Cart - Clear Button (삭제버튼) ##### */
+  // $(".cart .btn_all_clear").click(function () {
+  //   $(".cart_items").slideUp();
+  // });
+  // $(".cart .btn_clear").click(function () {
+  //   $(this).parent().parent().slideUp();
+  // });
+  /* ##### Cart - Check All ##### */
+  $(".cart_chk_all").click(function () {
+    $(".cart_chk").prop("checked", this.checked);
+  });
+  /* ##### Cart - Cart Item Empty ##### */
   $(".cart .btn_all_clear").click(function () {
-    $(".cart_items").slideUp();
+    $(".cart_items").remove();
+    if ($(".cart_item").length === 0) {
+      $(".cart_item_empty").show();
+      $(".cart_items_check_all, .cart_items_summary, .btn_order").remove();
+    }
   });
   $(".cart .btn_clear").click(function () {
-    $(this).parent().parent().slideUp();
+    $(this).parent().parent().remove();
+    if ($(".cart_item").length === 0) {
+      $(".cart_item_empty").show();
+      $(".cart_items_check_all, .cart_items_summary, .btn_order").remove();
+    }
   });
   /* ##### Detail - Goods Accordion ##### */
   $(".goods_accordion .detail").eq(0).show(); // 상품 후기는 미리 열려있게

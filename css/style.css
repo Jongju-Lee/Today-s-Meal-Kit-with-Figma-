@@ -499,12 +499,12 @@ button.btn_signin {
   color: var(--darkGray);
 }
 .goods_suggestion_items {
-  width: 460px;
+  width: calc(var(--slideBasis) * 1.23);
   margin-bottom: 15px;
 }
 .goods_suggestion_item .thum {
-  width: 145px;
-  height: 180px;
+  width: calc(var(--slideBasis) * 0.39);
+  height: calc(var(--slideBasis) * 0.48);
 }
 .goods_suggestion_item .thum img {
   width: inherit;
@@ -513,12 +513,11 @@ button.btn_signin {
   border-radius: 5px;
 }
 .goods_suggestion_item .desc {
-  width: 135px;
+  width: calc(var(--slideBasis) * 0.39);
 }
 /* Responsive Suggestion Item */
-@media (min-width: 400px) {
+/* @media (min-width: 400px) {
   .goods_suggestion_items {
-    border: 3px solid blue;
     width: 500px;
   }
   .goods_suggestion_item .thum {
@@ -528,7 +527,7 @@ button.btn_signin {
   .goods_suggestion_item .desc {
     width: 155px;
   }
-}
+} */
 .goods_title h3 {
   font-size: 13px;
   line-height: 1.2em;
@@ -1417,16 +1416,37 @@ button.plus {
   padding: 0;
 }
 .cart_items_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 20px;
   padding-top: 20px;
 }
 .cart_items_header h3 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  margin: 0;
+  margin-bottom: 10px;
+}
+.cart_items_check_all {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--cloudyGray);
+  padding-bottom: 10px;
+}
+.cart_items_check_all .cart_chk_all {
+  width: 18px;
+  height: 18px;
+  transform: translateY(4px);
+  margin-right: 5px;
+  accent-color: var(--crimson);
+  margin-left: 0px;
+}
+.cart_items_check_all em {
+  font-style: normal;
+  color: var(--crimson);
+}
+/* Cart Item Empty */
+.cart_item_empty {
+  text-align: center;
+  padding: 50px 0;
+  display: none;
 }
 .cart_items {
   margin: 20px 0;
@@ -1599,4 +1619,15 @@ button.plus {
 .cart_notice li::before {
   content: "-";
   margin-right: 5px;
+}
+/* For Big Size Mobile & Tablet Device */
+@media (min-width: 400px) {
+  :root {
+    --slideBasis: 420px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --slideBasis: 800px;
+  }
 }

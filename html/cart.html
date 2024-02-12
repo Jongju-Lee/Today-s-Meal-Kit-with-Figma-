@@ -17,14 +17,30 @@
         <div class="main_header_include"></div>
         <!-- Main Header Include -->
         <div class="cart_content">
-          <div class="cart_items_header">
+          <!-- <div class="cart_items_header">
             <h3>장바구니</h3>
             <button class="btn_all_clear">전체삭제</button>
+          </div> -->
+          <!-- Cart Items header -->
+          <div class="cart_items_header">
+            <h3>장바구니</h3>
+            <div class="cart_items_check_all">
+              <span>
+                <input type="checkbox" class="cart_chk_all" checked />전체선택
+                <em>2</em>/2
+              </span>
+              <button class="btn_all_clear">전체삭제</button>
+            </div>
           </div>
           <div class="cart_items">
             <div class="cart_item">
               <div class="cart_item_title">
-                <input type="checkbox" id="item_title1" checked />
+                <input
+                  type="checkbox"
+                  id="item_title1"
+                  class="cart_chk"
+                  checked
+                />
                 <em></em>
                 <label for="item_title1"
                   >오징어 가득 씨키트 해물 스파게티 오징어볶음 밀키트(2인)
@@ -65,7 +81,12 @@
             </div>
             <div class="cart_item">
               <div class="cart_item_title">
-                <input type="checkbox" id="item_title2" checked />
+                <input
+                  type="checkbox"
+                  id="item_title2"
+                  class="cart_chk"
+                  checked
+                />
                 <em></em>
                 <label for="item_title2"
                   >HACCP 인증을 받은 닭꼬치 밀키트, 굽기만 하면 끝(10개)</label
@@ -123,6 +144,11 @@
             </div>
           </div>
           <button class="btn_primary btn_order">2개 상품 주문하기</button>
+          <!-- Cart Item Empty -->
+          <div class="cart_item_empty">
+            <img src="/images/cart-item-empty.png" alt="" />
+          </div>
+          <!-- Cart Item Empty -->
           <ul class="cart_notice">
             <li>장바구니에 담긴 상품은 90일간 보관됩니다.</li>
             <li>실 결제금액은 쿠폰 및 할인 적용에 따라 달라질 수 있습니다.</li>
